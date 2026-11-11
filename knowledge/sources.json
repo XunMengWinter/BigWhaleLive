@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "netizen-parody",
+      "title": "网友二创虚构设定（非事实）",
+      "kind": "fiction",
+      "checked_at": "2026-11-09"
+    },
+    {
+      "id": "office-meme-lore",
+      "title": "海底办公室 AI 江湖二创设定（非事实）",
+      "kind": "fiction",
+      "checked_at": "2026-11-09"
+    }
+  ]
+}

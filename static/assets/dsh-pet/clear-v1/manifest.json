@@ -1,0 +1,53 @@
+{
+  "version": "clear-v1",
+  "license": "CC-BY-NC-SA-4.0",
+  "upstream_commit": "6d110d013922fde7ff72e4a910365fae6bbb0835",
+  "filter": "unsharp=3:3:0.6:3:3:0:3:3:0,scale=1920:1080:flags=lanczos",
+  "encoder": "libvpx-vp9, yuva420p, CRF16, cpu-used3, 2 threads",
+  "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+  "note": "Reconstruction and mild sharpening, not native HD or generative redrawing.",
+  "assets": [
+    {
+      "file": "idle.webm",
+      "source": "../idle.webm",
+      "source_sha256": "deb965d05a85dacf5ff4a20faa757846f0d11679598c3ec578a5571487660395",
+      "sha256": "43bc0158fe711e1bcb20fd374826896a63719bb3cf6e7c8147efdabe434c519a",
+      "bytes": 5251386,
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "24/1",
+      "nb_read_frames": "241",
+      "duration": "10.042000"
+    },
+    {
+      "file": "speaking.webm",
+      "source": "../speaking.webm",
+      "source_sha256": "fda85ca286e173b7cf868c91829c3445e55c395e0c788b6be310a855b9b37973",
+      "sha256": "5d2b600196b9acd06ff7004695f61c3a949dcb4efa43799c832389611062c220",
+      "bytes": 4474180,
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "24/1",
+      "nb_read_frames": "241",
+      "duration": "10.042000"
+    },
+    {
+      "file": "thinking.webm",
+      "source": "../thinking.webm",
+      "source_sha256": "b4a36cfa28ea5d7089e362a01972c6e880297c6dcd0d39f1994efd889a3c1be5",
+      "sha256": "b09660e89737d45627ca82233fee798c77ffdd838aabcbaabb662baff82b3ecf",
+      "bytes": 4455607,
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "24/1",
+      "nb_read_frames": "241",
+      "duration": "10.042000"
+    },
+    {
+      "file": "poster.png",
+      "derived_from": "idle.webm first frame",
+      "sha256": "aa7ff1e23a002d134b30cc892f974b30bdcc6d67d2123528821e4113c4b31888",
+      "bytes": 671630
+    }
+  ]
+}

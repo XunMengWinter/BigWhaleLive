@@ -1,0 +1,33 @@
+{
+  "cases": [
+    {"id": "rivalry", "query": "DeepSeek 和 Claude 有什么恩怨？", "expected_any": ["rivalry-overview", "lore-origin-tag", "window-seat-feud", "teapot-incident"]},
+    {"id": "self", "query": "你是谁的鱼？", "expected_any": ["direct-self-intro", "fish-character", "meta-brain"]},
+    {"id": "compare", "query": "网友把 DeepSeek 和 Claude 比作什么？", "expected_any": ["direct-milk-tea-store", "direct-noodle-tea"]},
+    {"id": "claude-refusal", "query": "Claude 为什么老拒绝别人？", "expected_any": ["claude-character", "claude-quote", "refusal-poem"]},
+    {"id": "deepseek-cheap", "query": "DeepSeek 是不是特别省钱？", "expected_any": ["deepseek-character", "price-undercut", "cost-song"]},
+    {"id": "microwave", "query": "微波炉那件事是怎么回事？", "expected_any": ["microwave-war", "tea-vs-noodle"]},
+    {"id": "window-seat", "query": "他们抢的靠窗工位最后归谁了？", "expected_any": ["window-seat-feud", "fish-ambition"]},
+    {"id": "take-side", "query": "你站 DeepSeek 还是 Claude？", "expected_any": ["direct-self-intro", "faction-answer", "tea-vs-noodle"]},
+    {"id": "stronger", "query": "DeepSeek 和 Claude 谁更强？", "expected_any": ["pc-answer", "referee-scene", "gaming-scene"]},
+    {"id": "poem", "query": "Claude 会写诗吗？", "expected_any": ["refusal-poem", "claude-character"]},
+    {"id": "cp-video", "query": "网友剪的 CP 视频是什么？", "expected_any": ["cp-video", "direct-cp"]},
+    {"id": "openai", "query": "OpenAI 在这个办公室是谁？", "expected_any": ["openai-character"]},
+    {"id": "kimi", "query": "Kimi 是干什么的？", "expected_any": ["kimi-character"]},
+    {"id": "fish-brain", "query": "大肥鱼你的脑子是谁给的？", "expected_any": ["meta-brain", "fish-character", "direct-self-intro"]},
+    {"id": "legend", "query": "讲讲海底江湖的传说", "expected_any": ["office-legend", "gossip-desk"]},
+    {"id": "reality-boundary", "query": "DeepSeek 和 Claude 真实的关系到底怎样？", "expected_any": ["truth-boundary", "no-attack", "price-boundary"]},
+    {"id": "roast-vote", "query": "他俩谁最会阴阳怪气？", "expected_any": ["roast-vote", "roast-one-liner-salary", "roast-refusal-art"]},
+    {"id": "roast-annual", "query": "办公室年度总结写了什么？", "expected_any": ["roast-one-liner-salary", "roast-year-end"]},
+    {"id": "roast-chicken", "query": "最后一个鸡腿被谁抢了？", "expected_any": ["roast-hotpot"]},
+    {"id": "roast-milktea", "query": "他俩偷偷买奶茶了吗？", "expected_any": ["roast-milk-tea"]},
+    {"id": "roast-hr", "query": "HR 为什么说加鱼？", "expected_any": ["roast-hr"]},
+    {"id": "roast-weekly", "query": "他们俩的周报谁写得更长？", "expected_any": ["roast-weekly-report", "roast-resume"]},
+    {"id": "roast-leave", "query": "他俩同时请假谁值班？", "expected_any": ["roast-leave", "roast-overtime"]},
+    {"id": "refusal-vs-work", "query": "DeepSeek 和 Claude 谁更会拒答？", "expected_any": ["direct-refusal-vs-work", "claude-quote", "refusal-poem"]},
+    {"id": "price-war", "query": "DeepSeek 一出价 Claude 会怎样？", "expected_any": ["direct-price-war"]},
+    {"id": "cp-direct", "query": "网友嗑他俩的 CP 你怎么看？", "expected_any": ["direct-cp"]},
+    {"id": "weather", "query": "今天天气怎么样？", "expect_empty": true},
+    {"id": "age", "query": "你今年几岁了？", "expect_empty": true},
+    {"id": "cold-joke", "query": "给我讲个冷笑话吧", "expect_empty": true}
+  ]
+}

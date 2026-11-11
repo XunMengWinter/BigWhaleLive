@@ -1,0 +1,2 @@
+# Optional Apple Silicon worker; separate from the FastAPI environment.
+mlx-audio==0.6.4

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>直播控制台 · BigWhaleLive</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css"><script type="module" src="/static/js/control.js"></script>
+</head>
+<body class="control-page">
+<header class="topbar">
+  <a class="brand" href="/" aria-label="BigWhaleLive 舞台"><img src="/static/favicon.svg" alt="" width="30" height="30"><span>BigWhale<span class="brand-light">Live</span></span></a>
+  <nav aria-label="主导航"><a href="/" target="_blank" rel="noopener">直播舞台 ↗</a><a class="active" href="/control" aria-current="page">控制台</a></nav>
+  <span id="connection" class="connection">正在连接</span>
+</header>
+<main class="control-main">
+  <div class="workspace-heading"><div><span class="eyebrow">本地直播间</span><h1>直播控制台</h1><p class="subheading">管理主播节奏，发送一条弹幕，看看它怎样接话。</p></div><a class="button secondary" href="/" target="_blank" rel="noopener">打开舞台 ↗</a></div>
+  <section class="session-strip" aria-label="会话控制">
+    <div class="session-title"><span id="run-state" class="status-pill">已暂停</span><span id="phase" class="phase">待机</span><p id="state-detail">舞台就绪后，点击开始。</p></div>
+    <div class="session-actions"><button id="start" class="button primary" data-action="start" disabled>开始主播</button><button id="pause" class="button secondary" data-action="pause" disabled>暂停</button><button id="skip" class="button text-button" data-action="skip" disabled>跳过当前</button></div>
+  </section>
+  <div class="console-layout">
+    <div class="console-input">
+      <section class="compose-section" aria-labelledby="compose-heading">
+        <div class="section-title"><h2 id="compose-heading">模拟弹幕</h2><span class="quiet-label">LOCAL INPUT</span></div>
+        <p class="section-description">弹幕进入等待队列，当前一句结束后再回复。</p>
+        <form id="danmaku-form">
+          <label for="user">观众昵称</label><input id="user" name="user" value="小明" maxlength="32" required autocomplete="off">
+          <label for="text">弹幕内容</label><textarea id="text" name="text" rows="4" maxlength="200" placeholder="和大肥鱼打个招呼吧…" required></textarea>
+          <div class="compose-footer"><span id="char-count">0 / 200</span><button id="send" class="button primary" type="submit">发送弹幕 ↑</button></div>
+        </form>
+        <div class="examples"><span>试一句</span><button type="button" data-example="你好，今天过得怎么样？">你好呀</button><button type="button" data-example="你今天怎么又在摸鱼？">又在摸鱼？</button><button type="button" data-example="今天有什么让你开心的事？">聊聊开心的事</button></div>
+        <p id="notice" class="notice" role="status">先打开舞台，再开始主播，即可发送模拟弹幕。</p>
+      </section>
+      <section class="connection-section" aria-labelledby="environment-heading">
+        <h2 id="environment-heading">运行环境</h2>
+        <dl class="environment"><div><dt>主播大脑</dt><dd id="llm-description">正在读取配置</dd></div><div><dt>语音</dt><dd id="tts-description">正在读取配置</dd></div><div><dt>角色</dt><dd>大肥鱼 <span>dsh-pet 原版动画</span></dd></div><div><dt>平台</dt><dd id="bili-description">正在读取配置</dd></div></dl>
+        <p id="bili-detail" class="section-description"></p>
+        <p class="renderer-row"><i id="renderer-dot" class="dot"></i><span id="renderer-state">等待打开舞台</span></p>
+      </section>
+    </div>
+    <section class="activity-section" aria-labelledby="activity-heading">
+      <div class="section-title"><h2 id="activity-heading">互动记录</h2><span class="quiet-label">本窗口最近 16 条</span></div>
+      <div class="metrics"><div><strong id="accepted">0</strong><span>已接收弹幕</span></div><div><strong id="completed">0</strong><span>已完成发言</span></div><div><strong id="queue-size">0</strong><span>等待回复</span></div><div><strong id="failed">0</strong><span>处理失败</span></div></div>
+      <p id="queue-detail" class="queue-detail">过期 0 · 重复 0 · 拒绝 0</p>
+      <ol id="message-feed" class="message-feed" aria-label="互动记录"><li id="feed-empty" class="feed-empty"><span class="empty-symbol">↗</span><h3>第一句话，从这里开始</h3><p>发送弹幕后，这里会显示观众消息和主播台词。</p></li></ol>
+    </section>
+  </div>
+</main>
+<footer class="page-footer"><span>BigWhaleLive</span><span id="control-version">本地直播间</span></footer>
+</body></html>

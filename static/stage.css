@@ -1,0 +1,124 @@
+/* Raster scenery with live HTML clock and computer; counters and chat are real. */
+.stage-page { color-scheme:dark; background:#091f2b; color:#f8f0dc; }
+.stage-page .topbar { height:58px; min-height:58px; padding:0 24px; gap:32px; flex-wrap:nowrap; border-color:#28414d; }
+.stage-page .brand { font-size:16px; }
+.stage-page .brand-light { color:#a2b7bf; }
+.stage-page .topbar nav { width:auto; order:0; height:100%; gap:22px; }
+.stage-page .topbar nav a { color:#a2b7bf; font-size:12px; }
+.stage-page .topbar nav a.active { color:#f9edc8; border-color:#e4c589; }
+.stage-page .connection { color:#a2b7bf; }
+.stage-page .connection.online:before { background:#a7d9bd; }
+.stage-page .stage-main { width:100%; max-width:none; padding:12px 12px 0; }
+.stage-page .broadcast {
+  container-type:inline-size;
+  width:min(100%,calc((100svh - 152px) * 9 / 16));
+  height:auto; min-height:0; max-height:none; aspect-ratio:9/16;
+  margin:0 auto; border:1px solid #3a6270; border-radius:8px;
+  background:#17677d; box-shadow:0 18px 64px #0004;
+}
+.stage-backdrop { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; pointer-events:none; }
+/* A 9:16 broadcast is center-cropped on a 9:19.5 fullscreen player.
+   Keep foreground inside 16/19.5 = 82.051282% of the canvas width.
+   cqw still refers to the full broadcast, preserving readable text sizes. */
+.stage-safe-content { position:absolute; top:0; bottom:0; left:8.9743589744%; right:8.9743589744%; }
+.hud-panel {
+  position:absolute; left:3.5%; right:3.5%; z-index:4;
+  color:#fff5df; background:#283747f5;
+  border:.35cqw solid #91bdc3; border-radius:1.8cqw;
+  box-shadow:0 0 0 .45cqw #0a3549, inset 0 0 0 .65cqw #344d60;
+}
+.workstation-heading { top:3%; padding:2.5cqw 3cqw 2.8cqw; }
+.workstation-kicker { display:flex; justify-content:space-between; align-items:center; gap:2cqw; font-size:2.5cqw; font-weight:600; color:#cadbd9; }
+.ai-disclosure { font-size:2.2cqw; padding:.2cqw 1.1cqw; border:1px solid #8ca5a8; border-radius:.7cqw; white-space:nowrap; }
+.workstation-title { display:flex; align-items:center; justify-content:space-between; gap:1.5cqw; margin-top:1.8cqw; }
+.stage-page h1 { color:#fff4d6; font-size:5.6cqw; font-weight:800; letter-spacing:.05cqw; line-height:1.3; margin:0; text-shadow:0 .25cqw #10273b; }
+.stage-page .status-pill { font-size:2.5cqw; padding:.5cqw 1.5cqw; gap:1cqw; border-radius:3cqw; background:#173d4a; color:#b4d0d4; }
+.stage-page .status-pill:before { width:.8cqw; height:.8cqw; }
+.stage-page .status-pill.is-running { background:#134a4b; color:#c9e5c2; }
+.workstation-stats { top:14.7%; display:grid; grid-template-columns:1fr 1fr 1.55fr; padding:2.2cqw 1cqw; background:#103c51f2; }
+.workstation-stats > div { display:flex; align-items:center; flex-direction:column; gap:.1cqw; border-right:1px solid #54828b; min-width:0; }
+.workstation-stats > div:last-child { border:0; }
+.workstation-stats strong { font-size:4.5cqw; font-weight:800; line-height:1.3; font-variant-numeric:tabular-nums; }
+.workstation-stats > div:last-child strong { font-size:3.6cqw; line-height:1.62; }
+.workstation-stats span { font-size:2.2cqw; color:#c1d2d5; }
+.stage-page .caption-wrap {
+  top:23.5%; bottom:auto; left:3.5%; right:3.5%; min-height:0;
+  padding:1.3cqw 2cqw 1.6cqw; backdrop-filter:none;
+  background:#12354980; border:1px solid #c0e1dc29; border-radius:1.3cqw;
+  box-shadow:none;
+}
+.stage-page .caption-kind { font-size:1.9cqw; font-weight:500; letter-spacing:.05cqw; color:#b8d0d2; }
+.stage-page .caption-wrap p { margin-top:.5cqw; color:#fff7e8; font-size:3.1cqw; font-weight:550; line-height:1.5; text-shadow:0 .15cqw .4cqw #102b40; overflow-wrap:anywhere; }
+.stage-page .has-long-caption .caption-wrap p { font-size:2.7cqw; }
+.stage-clock { position:absolute; z-index:3; top:36.5%; right:4%; width:16cqw; padding:1cqw 1cqw .8cqw; border:.45cqw solid #c79b61; border-radius:8cqw 8cqw 2cqw 2cqw; background:#faedcd; color:#254c56; text-align:center; box-shadow:0 .7cqw 0 #755d40,0 1.2cqw 2cqw #062e4650,inset 0 0 0 .3cqw #fff7df; }
+.clock-face { position:relative; width:12.5cqw; height:12.5cqw; margin:0 auto .7cqw; border:.25cqw solid #a8b9ad; border-radius:50%; background:radial-gradient(circle,#fff3d9 62%,transparent 63%),repeating-conic-gradient(#47696b 0deg 2deg,transparent 2deg 30deg); }
+.clock-hand { position:absolute; left:calc(50% - .2cqw); bottom:50%; width:.4cqw; border-radius:1cqw; background:#31585e; transform-origin:50% 100%; }
+.hour-hand { height:3.1cqw; transform:rotate(var(--hour-angle,0deg)); }
+.minute-hand { height:4.5cqw; transform:rotate(var(--minute-angle,0deg)); }
+.clock-pin { position:absolute; left:calc(50% - .5cqw); top:calc(50% - .5cqw); width:1cqw; height:1cqw; border-radius:50%; background:#bc8751; }
+.stage-clock time { display:block; font-size:2.9cqw; font-weight:800; line-height:1.15; font-variant-numeric:tabular-nums; }
+.stage-clock > span { display:block; font-size:1.6cqw; margin-top:.35cqw; letter-spacing:.15cqw; }
+.hide-auxiliary .stage-clock,.hide-auxiliary .mood-label { visibility:hidden; }
+.mood-label { position:absolute; z-index:3; top:36.5%; left:4%; padding:.5cqw 2cqw; border:.3cqw solid #94b2bb; border-radius:5cqw; background:#30394de8; font-size:2.6cqw; font-weight:650; color:#f4ecd9; }
+/* Playback uses clearer derivatives of the unchanged 16:9 alpha originals.
+   Crop their lower body at
+   the illustrated desk edge (83%), retaining a large head/shoulders composition. */
+.stage-page .character-area { top:30%; bottom:auto; left:0; right:0; height:53%; overflow:hidden; z-index:2; }
+.stage-page .character { height:118%; width:100%; transform:translateY(-8.888889cqw); filter:drop-shadow(0 1cqw 1cqw #072c4430); }
+.stage-page .character video,.stage-page .character-poster { top:7.5%; left:54%; height:100%; width:auto; max-width:none; aspect-ratio:16/9; object-fit:contain; transform:translateX(-50%); }
+.stage-page .character-mouth { position:absolute; top:7.5%; left:54%; height:100%; width:auto; max-width:none; aspect-ratio:16/9; transform:translateX(-50%); pointer-events:none; visibility:hidden; overflow:visible; }
+.desk-computer { position:absolute; z-index:3; left:4%; top:70.2%; width:46%; color:#e1f4e8; transform:perspective(100cqw) rotateY(30deg); transform-origin:50% 90%; }
+.monitor-frame { padding:.9cqw .9cqw 0; border:.35cqw solid #172e3e; border-radius:1.6cqw; background:linear-gradient(145deg,#476273,#293e50); box-shadow:-.8cqw .4cqw 0 #162f3e,0 1cqw 2cqw #102f4a35; }
+.monitor-screen { position:relative; height:24.5cqw; overflow:hidden; padding:1.3cqw; border:.3cqw solid #142d39; border-radius:.7cqw; background:linear-gradient(135deg,#103b43,#142b3d); box-shadow:inset 0 0 3cqw #5ebd9b15; }
+.monitor-toolbar { display:flex; justify-content:space-between; gap:.5cqw; padding-bottom:.8cqw; border-bottom:1px solid #6a9f9a55; color:#b1d9d1; font-size:1.6cqw; }
+.monitor-toolbar i,.monitor-chin i { display:inline-block; width:.5cqw; height:.5cqw; margin-right:.5cqw; border-radius:50%; background:#9cdfb4; }
+.desk-chat { list-style:none; padding:0; margin:.8cqw 0 0; display:flex; flex-direction:column; gap:.65cqw; }
+.desk-chat li { font-size:2cqw; line-height:1.35; overflow-wrap:anywhere; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.desk-chat strong { color:#e9ce95; font-weight:650; }
+.chat-empty { position:absolute; inset:6.7cqw 0 auto; text-align:center; font-size:2.6cqw; font-weight:600; color:#c3e5d7; }
+.chat-empty span { display:block; margin-top:.8cqw; font-size:1.7cqw; font-weight:400; color:#8db4b4; }
+.monitor-chin { height:2.4cqw; display:flex; align-items:center; justify-content:center; gap:8cqw; font-size:1.2cqw; color:#b9c8cb; letter-spacing:.3cqw; }
+.monitor-stand { width:5cqw; height:2.8cqw; margin:auto; background:linear-gradient(90deg,#243d4b,#536b73,#253f4b); }
+.monitor-base { width:15cqw; height:1cqw; margin:auto; border:.2cqw solid #243a46; border-radius:50% 50% .5cqw .5cqw; background:#536970; box-shadow:1cqw .5cqw 1cqw #343e4140; }
+.desk-keyboard { position:absolute; z-index:3; left:54%; top:86.5%; width:30cqw; height:4cqw; margin:0; border:.5cqw solid #3a5360; border-radius:.5cqw; transform:translateX(-50%) perspective(30cqw) rotateX(40deg); transform-origin:center top; background:repeating-linear-gradient(0deg,transparent 0 .65cqw,#425e69 .65cqw .9cqw),repeating-linear-gradient(90deg,#9eb6b5 0 1.5cqw,#425e69 1.5cqw 1.8cqw); box-shadow:.4cqw .4cqw 0 #283e48; }
+.desk-sign { position:absolute; z-index:3; left:6%; top:91%; color:#fff4dc; text-shadow:0 .3cqw .4cqw #514331; }
+.desk-sign > span { display:block; font-size:1.8cqw; font-weight:600; }
+.desk-sign strong { display:block; margin-top:.5cqw; font-size:3cqw; font-weight:800; letter-spacing:.05cqw; }
+.stage-page .broadcast-footer { z-index:4; left:5%; right:5%; bottom:2%; color:#f6edd7; font-size:1.9cqw; letter-spacing:0; text-shadow:0 1px 2px #3b3026; }
+.stage-page .stage-bottom { max-width:660px; margin:0 auto; padding:10px 0 5px; align-items:center; gap:12px; color:#b3c5cd; font-size:11px; }
+.stage-page .stage-bottom p { max-width:none; }
+.music-credit { position:absolute; z-index:4; left:5%; right:5%; bottom:.4%; text-align:center; color:#f6edd7; font-size:1.8cqw; line-height:1.35; text-shadow:0 1px 2px #3b3026; }
+.music-credit a { color:inherit; }
+.music-controls { display:flex; align-items:center; justify-content:center; gap:12px; color:#b3c5cd; font-size:11px; margin-top:8px; }
+.obs-view .music-controls { display:none; }
+.obs-view .needs-music .music-controls { display:flex; position:fixed; z-index:11; bottom:80px; padding:8px 12px; background:#102e41; border-radius:8px; }
+.stage-page .stage-diagnostics { color:#829fae; font-size:10px; margin-top:3px; }
+.stage-page .button { min-height:36px; border-color:#607d8b; color:#e6ece9; font-size:11px; }
+.stage-page .button.primary { background:#d7d7ba; color:#1c3a46; border-color:#e2e1c7; }
+.stage-page .button.secondary { background:#193b4b; }
+.stage-page .button:hover:not(:disabled) { background:#356278; color:#fff; }
+.stage-page .page-footer { display:none; }
+/* Capture the same scene at 1080x1920. Setup controls reveal on interaction;
+   once a voice stage owns playback they stay out of the captured picture. */
+.obs-view,.obs-view .stage-page { width:100%; height:100%; overflow:hidden; background:#091f2b; }
+.obs-view .stage-page { display:grid; place-items:center; }
+.obs-view .topbar { display:none; }
+.obs-view .stage-main { padding:0; }
+.obs-view .broadcast { width:min(100vw,calc(100svh * 9 / 16)); border:0; border-radius:0; box-shadow:none; }
+.obs-view .stage-bottom { position:fixed; z-index:10; left:12px; right:12px; bottom:12px; max-width:660px; background:#102e41f5; border:1px solid #7897a4; border-radius:8px; padding:10px; opacity:0; pointer-events:none; }
+.obs-view .needs-audio .stage-bottom { opacity:1; pointer-events:auto; }
+@media(max-width:640px) {
+  .stage-page .topbar { height:50px; min-height:50px; padding:0 12px; gap:14px; }
+  .stage-page .brand { font-size:13px; gap:6px; }
+  .stage-page .brand img { width:23px; height:23px; }
+  .stage-page .topbar nav { gap:12px; margin-left:auto; }
+  .stage-page .topbar nav a { font-size:11px; }
+  .stage-page .topbar nav a.active { display:none; }
+  .stage-page .connection { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+  .stage-page .stage-main { padding:8px 10px 0; }
+  .stage-page .broadcast { width:min(100%,calc((100svh - 165px) * 9 / 16)); }
+  .stage-page .stage-bottom { display:flex; flex-wrap:wrap; gap:7px; padding-top:8px; font-size:10px; }
+  .stage-page .stage-actions { margin-left:auto; }
+  .obs-view .stage-main { padding:0; }
+  .obs-view .broadcast { width:min(100vw,calc(100svh * 9 / 16)); }
+}

@@ -1,0 +1,16 @@
+{
+  "voice_id": "xiaojing-v1",
+  "reference_file": "reference.wav",
+  "reference_sha256": "e82f998a6bf75a653d89062041c8211a2c7213432c758237cb3e5dc04163b979",
+  "reference_text": "呜……白饭怎么又没有啦？再给我添一碗嘛，好不好呀？",
+  "sample_rate": 24000,
+  "duration_seconds": 7.52,
+  "source": "Original Qwen3-TTS VoiceDesign synthesis, accepted by the user on 2026-11-08",
+  "design_model": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit",
+  "design_revision": "5c390979e4b93af5f2932f90742ca99c7dd04687",
+  "design_prompt": "中文普通话，二次元Q版动画里的年轻女声，声线细软、清亮、奶糯，带轻微鼻音和柔软气息。说话有自然的小停顿，像在撒娇讨一碗饭，先有点委屈，句尾轻轻扬起，尾音圆润。口语化，不要播音腔，不要刻意尖叫，不要机械朗读。",
+  "model_repo": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit",
+  "model_revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+  "seed": 27,
+  "temperature": 0.65
+}

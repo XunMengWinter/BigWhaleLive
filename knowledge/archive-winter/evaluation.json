@@ -1,0 +1,18 @@
+{
+  "cases": [
+    {"id":"winter", "query":"Winter喵是谁？", "expected_any":["winter-profile"]},
+    {"id":"courses", "query":"Winter有哪些课程？", "expected_any":["faq-course-choice","course-vibe-overview","course-kimi-overview"]},
+    {"id":"windows", "query":"Windows没有Mac可以学吗？", "expected_any":["faq-windows-mac","faq-vibe-2"]},
+    {"id":"kimi-projects", "query":"Kimi课程有几个项目？", "expected_any":["faq-kimi-4","course-kimi-overview"]},
+    {"id":"kimi-status", "query":"Kimi课程更新完了吗？", "expected_any":["faq-kimi-3","faq-lesson-count-boundary"]},
+    {"id":"vibe-tools", "query":"Vibe课程用什么工具？", "expected_any":["faq-vibe-3"]},
+    {"id":"concept-json", "query":"JSON是什么？", "expected_any":["concept-json"]},
+    {"id":"concept-api", "query":"API接口是什么意思？", "expected_any":["concept-api"]},
+    {"id":"concept-git", "query":"Git和GitHub是一样的吗？", "expected_any":["concept-git"]},
+    {"id":"concept-skill", "query":"Skill和MCP有什么区别？", "expected_any":["faq-skills-mcp-agents","concept-skill","concept-mcp"]},
+    {"id":"price", "query":"课程现在多少钱，有优惠吗？", "expected_any":["faq-prices-and-entitlements"]},
+    {"id":"citywalk", "query":"City Walk小程序做什么？", "expected_any":["project-vibe-citywalk"]},
+    {"id":"free", "query":"MiniCode知识文章免费吗？", "expected_any":["faq-free-knowledge","minicode-overview"]},
+    {"id":"unrelated", "query":"蓝莓酸奶好吃吗？", "expect_empty":true}
+  ]
+}

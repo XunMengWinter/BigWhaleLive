@@ -1,0 +1,293 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "web-home",
+      "title": "从看懂一个概念，开始 AI 编程",
+      "kind": "web",
+      "url": "https://minicode.uk/",
+      "checked_at": "2026-11-09",
+      "sha256": "058a845b6bbe0bb86b42145b3e82c2b10e0dbfbffdfdf90eefe38de5b7e697a8"
+    },
+    {
+      "id": "web-course",
+      "title": "用 AI，做出你的第一个 App",
+      "kind": "web",
+      "url": "https://minicode.uk/course/",
+      "checked_at": "2026-11-09",
+      "sha256": "6eb8caa7a759356bd775c014a6fbf6bf267b8d0f89eb8bc11b03d9fdbf6f2544"
+    },
+    {
+      "id": "web-courses-vibe-coding-app",
+      "title": "持续更新 · 10款App · 终身有效",
+      "kind": "web",
+      "url": "https://minicode.uk/courses/vibe-coding-app/",
+      "checked_at": "2026-11-09",
+      "sha256": "d9a65ae9910fa3507f4465032a0d664ba3a5cd3e60744ced4b4124f581170cd9"
+    },
+    {
+      "id": "web-courses-kimi-code",
+      "title": "Kimi Code零基础开发小程序",
+      "kind": "web",
+      "url": "https://minicode.uk/courses/kimi-code/",
+      "checked_at": "2026-11-09",
+      "sha256": "d246f1fb6591f76a803dc8cb4aeb22ea2369f75ce125afadca4db2ff25f3b663"
+    },
+    {
+      "id": "web-learn-prompt",
+      "title": "和 AI 沟通",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/prompt/",
+      "checked_at": "2026-11-09",
+      "sha256": "0c55899e8cc8fb8b9e2edab415f25120d364fcc82007d63350f3bef48cfd9449"
+    },
+    {
+      "id": "web-learn-context",
+      "title": "和 AI 沟通",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/context/",
+      "checked_at": "2026-11-09",
+      "sha256": "b4d6227c65ca4579dd8c94d1fc3767bc95fd55db99a583d45d68de39d8fadd5b"
+    },
+    {
+      "id": "web-learn-token",
+      "title": "和 AI 沟通",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/token/",
+      "checked_at": "2026-11-09",
+      "sha256": "305a52d327db5aea692524381e03181c8c8b5f9e30c89c9f6abb2d2326b0f645"
+    },
+    {
+      "id": "web-learn-multimodal",
+      "title": "和 AI 沟通",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/multimodal/",
+      "checked_at": "2026-11-09",
+      "sha256": "bdff2d6f56911922425bd11efbba2f9c9226acc1a2808006f4f7697569391c3a"
+    },
+    {
+      "id": "web-learn-hallucination",
+      "title": "和 AI 沟通",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/hallucination/",
+      "checked_at": "2026-11-09",
+      "sha256": "d45c206a25cb3c3c97ac95f5178b8cd50f34ef2b5ce95bad6dc972bfde62af4e"
+    },
+    {
+      "id": "web-learn-json",
+      "title": "项目与数据",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/json/",
+      "checked_at": "2026-11-09",
+      "sha256": "10fe225d9dda593b38d2b9af6d86754149eaabb47bfcc537c6aed9d9047e28fc"
+    },
+    {
+      "id": "web-learn-markdown",
+      "title": "项目与数据",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/markdown/",
+      "checked_at": "2026-11-09",
+      "sha256": "5e283856817d82b74dc174131317346784cfb04bab57a2bf3fd419625b24404b"
+    },
+    {
+      "id": "web-learn-files",
+      "title": "项目与数据",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/files/",
+      "checked_at": "2026-11-09",
+      "sha256": "8e751ed76af743e68f45a18af09eaa667a54d5e15ea2c994a546bfd36ba67e04"
+    },
+    {
+      "id": "web-learn-terminal",
+      "title": "项目与数据",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/terminal/",
+      "checked_at": "2026-11-09",
+      "sha256": "b42b6bd1942bf61d5606998d41d61a40496f68c40d99cc5c4e9335ff415fec4f"
+    },
+    {
+      "id": "web-learn-environment-variables",
+      "title": "项目与数据",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/environment-variables/",
+      "checked_at": "2026-11-09",
+      "sha256": "0c99e8f1b2f0f1f39fb4fb949fd236386ec40c017240b4d9a8c091d93c58a92b"
+    },
+    {
+      "id": "web-learn-api",
+      "title": "程序如何协作",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/api/",
+      "checked_at": "2026-11-09",
+      "sha256": "f459cd510bb251e13b4f33b28d34aefcf0a38a5fb03242d1bed969f314f2fe3e"
+    },
+    {
+      "id": "web-learn-frontend-backend",
+      "title": "程序如何协作",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/frontend-backend/",
+      "checked_at": "2026-11-09",
+      "sha256": "0225f4654b74f3a28e3b5635e604c4933abcc7aa1a7c20458eefdd186e1d8756"
+    },
+    {
+      "id": "web-learn-client-server",
+      "title": "程序如何协作",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/client-server/",
+      "checked_at": "2026-11-09",
+      "sha256": "ada8cfb50b4e82004e2a0ab4504d16043b481aeef0fa05d63e0076f9260aac0f"
+    },
+    {
+      "id": "web-learn-http",
+      "title": "程序如何协作",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/http/",
+      "checked_at": "2026-11-09",
+      "sha256": "f4696a1ee4257456484b752e2da7eca31421196045d8d97d3973b814bd855cf4"
+    },
+    {
+      "id": "web-learn-api-key",
+      "title": "程序如何协作",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/api-key/",
+      "checked_at": "2026-11-09",
+      "sha256": "5fefc847f1b1fa41fcce283de88754fbefe1a554e2c2c598ff2aee97d63d0b4a"
+    },
+    {
+      "id": "web-learn-database",
+      "title": "程序如何协作",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/database/",
+      "checked_at": "2026-11-09",
+      "sha256": "87db3a42789a6ab4a06a8a8a1fd16401235873fea30d2b905c6288f7c4558610"
+    },
+    {
+      "id": "web-learn-git",
+      "title": "AI 编程工具",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/git/",
+      "checked_at": "2026-11-09",
+      "sha256": "a3e72574a14e042bb1489fe310a7f7507a5da12474d6cfe6bc8b3d2135bd1278"
+    },
+    {
+      "id": "web-learn-agent",
+      "title": "AI 编程工具",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/agent/",
+      "checked_at": "2026-11-09",
+      "sha256": "b30d18419f4769e7c324e6ae899b6d65d08622fea9329b9cdd84fff74f09f469"
+    },
+    {
+      "id": "web-learn-agents-md",
+      "title": "AI 编程工具",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/agents-md/",
+      "checked_at": "2026-11-09",
+      "sha256": "ec9e2c66c43a410d803923059d4b5541c6a639b2d21b45795eb1b44faf7fecd9"
+    },
+    {
+      "id": "web-learn-tool-calling",
+      "title": "AI 编程工具",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/tool-calling/",
+      "checked_at": "2026-11-09",
+      "sha256": "b0e9637b4c1addfc90521657701b38ec7f60195f8d606338c3e021c78d10255c"
+    },
+    {
+      "id": "web-learn-skill",
+      "title": "AI 编程工具",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/skill/",
+      "checked_at": "2026-11-09",
+      "sha256": "5bc167502a69530158c91bcdc8c5202b5d3b4d4847b37d641a12fa2474d4e8c2"
+    },
+    {
+      "id": "web-learn-mcp",
+      "title": "AI 编程工具",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/mcp/",
+      "checked_at": "2026-11-09",
+      "sha256": "ff632e1a7d3afe98ae8a97839adf73d636c49c30e8fe7f9157911ee702305be1"
+    },
+    {
+      "id": "web-learn-repository",
+      "title": "AI 编程工具",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/repository/",
+      "checked_at": "2026-11-09",
+      "sha256": "709cafb68fb4aae691884a2f1a0445d9b30af6e527475cf1387be9ad5203d6c2"
+    },
+    {
+      "id": "web-learn-commit",
+      "title": "AI 编程工具",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/commit/",
+      "checked_at": "2026-11-09",
+      "sha256": "2f3ca6d3d532d106b39d22cde6f28a8ef7a5fc3595882aa1c22a763f374c0b67"
+    },
+    {
+      "id": "web-learn-branch",
+      "title": "AI 编程工具",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/branch/",
+      "checked_at": "2026-11-09",
+      "sha256": "e7f18cde969d201ce460cb94d0617cbde4fddb134b4f9eb1b62b0fb0b71f2636"
+    },
+    {
+      "id": "web-learn-workflow",
+      "title": "AI 编程工具",
+      "kind": "web",
+      "url": "https://minicode.uk/learn/workflow/",
+      "checked_at": "2026-11-09",
+      "sha256": "ade7624754a775c1f39fee988ae76c2160392669a230ff8ed9cfa76ba2ddd508"
+    },
+    {
+      "id": "local-site",
+      "title": "site.ts（本地正式资料）",
+      "kind": "local",
+      "path": "[本机路径已脱敏]/site.ts",
+      "checked_at": "2026-11-09",
+      "sha256": "c697ba0983d44e981b2d8f9abe2380f55b6c1704d3379224de9019d03d61143e"
+    },
+    {
+      "id": "local-entities",
+      "title": "entities.ts（本地正式资料）",
+      "kind": "local",
+      "path": "[本机路径已脱敏]/entities.ts",
+      "checked_at": "2026-11-09",
+      "sha256": "d1da5f5bfd5cea85f9bd23311ddfedffcf54b0d14c1d8b6a2402613072633e08"
+    },
+    {
+      "id": "local-vibe",
+      "title": "vibe.ts（本地正式资料）",
+      "kind": "local",
+      "path": "[本机路径已脱敏]/vibe.ts",
+      "checked_at": "2026-11-09",
+      "sha256": "cb68ce43442fc639bf92e93c794f2d49d2a55579d6fd69c6a322b9222d61e766"
+    },
+    {
+      "id": "local-kimi",
+      "title": "kimi.ts（本地正式资料）",
+      "kind": "local",
+      "path": "[本机路径已脱敏]/kimi.ts",
+      "checked_at": "2026-11-09",
+      "sha256": "7bcbe0f8d41cde14909f5c23911125b8ae7d68795ac47363ad6fa571f020976e"
+    },
+    {
+      "id": "local-learn",
+      "title": "learn.ts（本地正式资料）",
+      "kind": "local",
+      "path": "[本机路径已脱敏]/learn.ts",
+      "checked_at": "2026-11-09",
+      "sha256": "ebf2d8c473fe6396f1f526f28fb122a212d8eacb093d79ca2aaa8c51dc5ff204"
+    },
+    {
+      "id": "local-course-progress",
+      "title": "course-progress.md（本地正式资料）",
+      "kind": "local",
+      "path": "[本机路径已脱敏]/course-progress.md",
+      "checked_at": "2026-11-09",
+      "sha256": "e2d320b1327b2d7b18732f92829ce44513beacbfc43706a8d0fcb98d85e5f146"
+    }
+  ]
+}

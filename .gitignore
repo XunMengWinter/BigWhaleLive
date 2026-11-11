@@ -1,0 +1,81 @@
+# Local environment and credentials; keep shareable configuration templates.
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.template
+!.env.*.template
+*.pem
+*.key
+*.p12
+*.pfx
+/secrets/
+
+# Python environments, caches and packaging output.
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+
+# Frontend dependencies and build output; keep dependency manifests and locks.
+node_modules/
+dist/
+build/
+.cache/
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.onnx
+
+# Temporary work, generated artifacts and diagnostic recordings.
+/tmp/
+/.tmp/
+/temp/
+/scratch/
+/.scratch/
+/artifacts/
+/outputs/
+/logs/
+/runtime/
+/test-results/
+/playwright-report/
+/.playwright-cli/
+/design-qa.md
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# Test and coverage output.
+.coverage
+.coverage.*
+coverage/
+htmlcov/
+coverage.xml
+
+# Generated TTS audio; retain an optional directory placeholder.
+/static/audio/*
+!/static/audio/.gitkeep
+
+# Generated frontend bundles; keep their source and dependency lock files.
+/static/generated/
+/static/assets/dsh-pet/clear-v1/.*.tmp.webm
+
+# Machine-specific files and editor settings.
+.DS_Store
+._*
+.idea/
+.vscode/
+.codex/
+.claude/settings.local.json

@@ -1,0 +1,24 @@
+# Normalize text while keeping launcher scripts usable on macOS/Linux.
+* text=auto
+*.py text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.in text eol=lf
+*.sh text eol=lf
+*.command text eol=lf
+
+# Official media assets, including the README screenshot, belong in Git.
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.gif binary
+*.wav binary
+*.mp3 binary
+*.webm binary
+*.mp4 binary

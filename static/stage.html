@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>大肥鱼的直播间 · BigWhaleLive</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/stage.css">
+  <script>document.documentElement.classList.toggle('obs-view', new URLSearchParams(location.search).get('view') === 'obs');</script>
+  <script type="module" src="/static/js/stage.js"></script>
+</head>
+<body class="stage-page">
+<header class="topbar portrait-topbar">
+  <a class="brand" href="/" aria-label="BigWhaleLive 舞台"><img src="/static/favicon.svg" alt="" width="30" height="30"><span>BigWhale<span class="brand-light">Live</span></span></a>
+  <nav aria-label="主导航"><a class="active" href="/" aria-current="page">竖屏舞台</a><a href="/?view=obs" target="_blank" rel="noopener">采集画面 ↗</a><a href="/control" target="_blank" rel="noopener">控制台 ↗</a></nav>
+  <span id="connection" class="connection">正在连接</span>
+</header>
+<main class="stage-main">
+  <section class="broadcast portrait-stage" aria-label="9:16 竖屏直播舞台">
+    <img class="stage-backdrop" src="/static/assets/stage/ocean-office-v2.jpg" alt="" width="1080" height="1920" fetchpriority="high">
+    <div class="stage-safe-content" aria-label="9:19.5 全面屏内容安全区">
+    <header class="workstation-heading hud-panel">
+      <div class="workstation-kicker"><span>海底工位 · 今日份陪伴</span><span class="ai-disclosure">AI 虚拟主播</span></div>
+      <div class="workstation-title"><h1><span id="ai-name">大肥鱼</span>的摸鱼时间</h1><span id="stage-status" class="status-pill">已暂停</span></div>
+    </header>
+    <div class="workstation-stats hud-panel" aria-label="本次会话统计">
+      <div><strong id="completed-count">0</strong><span>完成对话</span></div>
+      <div><strong id="accepted-count">0</strong><span>收到弹幕</span></div>
+      <div><strong id="queue-count">0 条待回复</strong><span>先来后到，慢慢聊</span></div>
+    </div>
+    <div class="caption-wrap hud-panel"><span id="caption-kind" class="caption-kind">等待开始</span><p id="caption" aria-live="polite">来了就坐，今天也一起开心摸鱼。</p></div>
+    <div class="stage-clock" aria-label="墙上的北京时间时钟">
+      <div class="clock-face" aria-hidden="true"><i class="clock-hand hour-hand"></i><i class="clock-hand minute-hand"></i><i class="clock-pin"></i></div>
+      <time id="local-clock" aria-label="当前北京时间">--:--</time><span>北京时间</span>
+    </div>
+    <div class="mood-label">心情 · <span id="mood-label">发会儿呆</span></div>
+    <div class="character-area">
+      <div id="character" class="character" role="img" aria-label="dsh-pet 原版大肥鱼角色">
+        <img class="character-poster" src="/static/assets/dsh-pet/clear-v1/poster.png" alt="" width="1920" height="1080">
+        <video data-clip="idle" src="/static/assets/dsh-pet/clear-v1/idle.webm" muted loop playsinline preload="auto" aria-hidden="true"></video>
+        <video data-clip="speaking" src="/static/assets/dsh-pet/clear-v1/speaking.webm" muted loop playsinline preload="auto" aria-hidden="true"></video>
+        <video data-clip="thinking" src="/static/assets/dsh-pet/clear-v1/thinking.webm" muted loop playsinline preload="auto" aria-hidden="true"></video>
+        <svg class="character-mouth" viewBox="0 0 640 360" aria-hidden="true">
+          <defs><filter id="mouth-feather" x="-30%" y="-40%" width="160%" height="180%"><feGaussianBlur stdDeviation=".55"/></filter></defs>
+          <g><rect class="mouth-skin" rx="1.5" filter="url(#mouth-feather)"/><path class="mouth-shape" stroke="#8e6260" stroke-width=".55" stroke-linecap="round"/><path class="mouth-tongue" fill="#ca8d92"/></g>
+        </svg>
+      </div>
+    </div>
+    <section class="desk-computer" aria-label="桌面电脑 · 实时弹幕">
+      <div class="monitor-frame"><div class="monitor-screen">
+        <div class="monitor-toolbar"><span><i></i> 工位聊天室</span><span id="chat-status">连接中</span></div>
+        <ol id="desk-chat" class="desk-chat" aria-label="最近收到的弹幕"></ol>
+        <p id="chat-empty" class="chat-empty">等你来串门<span>收到的弹幕会出现在这里</span></p>
+      </div><div class="monitor-chin"><span>摸鱼专用</span><i></i></div></div>
+      <div class="monitor-stand" aria-hidden="true"></div><div class="monitor-base" aria-hidden="true"></div>
+    </section>
+    <div class="desk-keyboard" aria-hidden="true"></div>
+    <div class="desk-sign"><span>今日小目标</span><strong>好好聊天，按时下班。</strong></div>
+    <div class="broadcast-footer"><a id="character-mode-label" href="https://github.com/PC2005-cloud/dsh-pet" target="_blank" rel="noopener">大肥鱼 · dsh-pet ↗</a><span>素材 CC BY-NC-SA 4.0</span></div>
+    <div class="music-credit"><a href="https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300046" target="_blank" rel="noopener">Dream Culture · Kevin MacLeod · incompetech.com</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0 · 音量调整</a></div>
+    </div>
+  </section>
+  <audio id="speech-audio" preload="auto" hidden></audio>
+  <audio id="background-music" src="/static/assets/music/dream-culture.mp3" preload="none" loop hidden></audio>
+  <div class="music-controls"><span id="music-status" role="status">音乐待机</span><button id="toggle-music" class="button secondary small">关闭音乐</button></div>
+  <div class="stage-bottom"><div><p id="stage-notice" role="status">正在读取直播间配置。</p><p class="stage-diagnostics"><span id="brain-mode">正在连接</span> · <span id="voice-mode">等待配置</span> · <span id="owner-label">等待连接</span> · <span id="lip-sync-status">口型待机</span></p></div><div class="stage-actions"><button id="enable-audio" class="button primary small" hidden>启用声音</button><button id="claim" class="button secondary small" disabled>申请播放权</button></div></div>
+</main>
+<footer class="page-footer"><span>角色素材：<a href="https://github.com/PC2005-cloud/dsh-pet" target="_blank" rel="noopener">dsh-pet</a> · CC BY-NC-SA 4.0</span><span id="stage-version">本地直播间</span></footer>
+</body></html>
