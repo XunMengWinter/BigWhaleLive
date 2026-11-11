@@ -1,5 +1,9 @@
 # BigWhaleLive
 
+**直播间：[进入大肥鱼的 B站直播间](https://live.bilibili.com/9748572)**
+
+**讲解视频：[0 基础搭建 AI 虚拟直播间（DeepSeek 大肥鱼）](https://www.bilibili.com/video/BV16ZW86EEyj/)**
+
 大肥鱼AI直播间：游客弹幕 → DeepSeek → 小鲸v1固定声线 → 9:16舞台 → OBS → B站。当前已在用户授权下向 [9748572](https://live.bilibili.com/9748572) 推流；角色使用指定的dsh-pet原版透明动画，尚非Live2D。
 
 <p align="center">
